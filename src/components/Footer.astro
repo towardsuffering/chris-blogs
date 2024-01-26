@@ -1,0 +1,57 @@
+---
+const today = new Date();
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<footer>
+	&copy; {today.getFullYear()} Chris Rotunno. All rights reserved.
+	<div class="social-links">
+		<div class="social-links">
+		<a href="https://www.youtube.com/@root-labs" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on YouTube</span>
+			<Icon name="youtube" size="2rem" />
+		</a>
+		<a href="https://discord.gg/WyjE3ABX4V" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on Discord</span>
+			<Icon name="discord" size="2rem" />
+		</a>
+		<a href="https://www.linkedin.com/in/chris-rotunno/" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on LinkedIn</span>
+			<Icon name="linkedin" size="2rem" />
+		</a>
+		</a>
+		<a href="https://github.com/towardsuffering" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on GitHub</span>
+			<Icon name="github" size="2rem" />
+		</a>
+		<a href="https://soundcloud.com/chris-rotunno" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on SoundCloud</span>
+			<Icon name="star" size="2rem" />
+		</a>
+		<a href="https://www.linkedin.com/in/chris-rotunno/" target="_blank">
+			<span class="sr-only">Follow Chris Blogs on RSS</span>
+			<Icon name="rss" size="2rem" />
+		</a>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>

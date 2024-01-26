@@ -1,0 +1,97 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px; /* Increased to accommodate descriptions */
+            padding-left: 20px;
+            position: relative;
+        }
+        li:before {
+            content: '•';
+            color: #007BFF; /* Change to your preferred bullet color */
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+        }
+        .description {
+            margin-top: 5px;
+            margin-left: 20px; /* Aligns with bullet text */
+        }
+        code {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 2px 4px;
+        }
+        a {
+            color: #007BFF; /* Match bullet color for consistency */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .marquee-text {
+            font-size: 48px; /* Adjust the size as needed */
+            color: #2337ff; /* Sets the font color to blue */
+            font-family: Arial, sans-serif; /* Optional: Sets the font family */
+			font-weight: bold; /* Makes the text bold */
+
+        }
+		.highlighted {
+			background-color: #f5deb3; /* Highlight background */
+			color: black; /* Text color */
+			padding: 5px; /* Some padding around the text */
+			border-radius: 5px; /* Optional: rounded corners */
+}
+
+    </style>
+</head>
+<body>
+    <Header title={SITE_TITLE} />
+    <main>
+		<marquee class="marquee-text">Web. Analytics. Music. Economics. Financial Intelligence.</marquee>
+		<h1>🧑🏻‍💻 Chris Blogs</h1>
+		<p>Hey there, I'm Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.</p>
+        <p>My interests are multifaceted and range from cat humor to entropy. Here are some of the topics touched on in this blog:</p>
+        <ul>
+            <li><h4>Data Analytics</h4>
+                <div class="description">Exploring the power of data in driving decisions and insights.</div>
+            </li>
+            <li><h4>Web Development</h4>
+                <div class="description">Building the web, one line of code at a time.</div>
+            </li>
+            <li><h4>Music Industry</h4>
+                <div class="description">Behind the scenes of industry and sounds.</div>
+            </li>
+            <li><h4>Economics</h4>
+                <div class="description">Understanding the forces that shape the US monetary system.</div>
+            </li>
+            <li><h4>Financial Intelligence</h4>
+                <div class="description">Empowering market analysis and accounting best practices.</div>
+            </li>
+        </ul>        <!-- Additional content and helpful links -->
+    </main>
+    <Footer />
+</body>
+</html>
