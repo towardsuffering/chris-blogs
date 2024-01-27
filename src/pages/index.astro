@@ -96,12 +96,28 @@ import '../styles/global.css';
 			border-bottom-right-radius: 10px;
 		}
 
-				.highlighted {
-					background-color: #f5deb3; /* Highlight background */
-					color: black; /* Text color */
-					padding: 5px; /* Some padding around the text */
-					border-radius: 5px; /* Optional: rounded corners */
+		.highlighted {
+			background-color: #f5deb3; /* Highlight background */
+			color: black; /* Text color */
+			padding: 5px; /* Some padding around the text */
+			border-radius: 5px; /* Optional: rounded corners */
 		}
+		.video-container {
+			display: flex; /* Enables Flexbox */
+			justify-content: center; /* Centers content horizontally */
+			margin: 20px 0; /* Adds some space above and below the container */
+    }
+
+    /* Style adjustments for the iframe to maintain standard size */
+		.video-container iframe {
+			width: 560px; /* Standard width for the video */
+			height: 315px; /* Standard height for the video */
+    }
+		.centered-text {
+			text-align: center; /* Centers the text horizontally within its container */
+			margin: 20px 0; /* Adds vertical spacing above and below the text for better separation */
+}
+
 
     </style>
 </head>
@@ -111,31 +127,34 @@ import '../styles/global.css';
 		<div class="billboard">
 			<div class="lights-top"></div>
 			<div class="marquee-container">
-				<marquee class="marquee-text">🌐 Web. 📊 Analytics. 🎺 Music. 🏬 Markets. 🤖 Flexwork. </marquee>
+				<marquee class="marquee-text">🌐 Web. 📊 Analytics. 🎺 Music. 🏬 Markets. </marquee>
 			</div>
 			<div class="lights-bottom"></div>
 		</div>
 		
 				<h1>🧑🏻‍💻 Chris Blogs</h1>
-		<p>Hey there, I'm Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.
-			My interests are multifaceted and range from cat humor to entropy. Arranged in no partcular order, here are some of the topics touched on in this blog:</p>
-        <ul>
-			<li><h4>Web Development</h4>
-                <div class="description">Delving into the digital realm, one line of code at a time, crafting seamless experiences.</div>
-            </li>
-            <li><h4>Data Analytics</h4>
-                <div class="description">Harnessing the power of data to uncover actionable insights and inform decision-making.</div>
-            </li>
-            <li><h4>Music Industry</h4>
-                <div class="description">Exploring the vibrant world of music through artists, emerging trends, and cultural shifts.</div>
-            </li>
-			<li><h4>Financial Markets</h4>
-                <div class="description">Navigating the intricacies of trading, from traditional stock exchanges to the dynamic sphere of decentralized platforms.</div>
-            </li>
-            <li><h4>Post-COVID Workplace</h4>
-                <div class="description">Exploring the evolution of flexible working in remote environments, reduced hours, and improved work-life balance.</div>
-            </li>
-        </ul>        <!-- Additional content and helpful links -->
+				<section id="chris-blogs-video">
+					<p class="centered-text">Featured Video</p>
+					<div class="video-container">
+					  <iframe src="https://www.youtube.com/embed/qSSLe0lervg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				  </section>
+				<p>Hey there, I'm Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.
+					My interests are multifaceted and range from cat humor to entropy. Arranged in no partcular order, here are some of the topics touched on in this blog:</p>
+				<ul>
+					<li><h4>Web Development</h4>
+						<div class="description">Delving into the digital realm, one line of code at a time, crafting seamless experiences.</div>
+					</li>
+					<li><h4>Data Analytics</h4>
+						<div class="description">Harnessing the power of data to uncover actionable insights and inform decision-making.</div>
+					</li>
+					<li><h4>Music Industry</h4>
+						<div class="description">Exploring the vibrant world of music through artists, emerging trends, and cultural shifts.</div>
+					</li>
+					<li><h4>Financial Markets</h4>
+						<div class="description">Navigating the intricacies of trading, from traditional stock exchanges to the dynamic sphere of decentralized platforms.</div>
+					</li>
+				</ul>        <!-- Additional content and helpful links -->
     </main>
     <Footer />
 </body>
