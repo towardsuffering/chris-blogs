@@ -51,44 +51,89 @@ import '../styles/global.css';
         a:hover {
             text-decoration: underline;
         }
-        .marquee-text {
-            font-size: 48px; /* Adjust the size as needed */
-            color: #2337ff; /* Sets the font color to blue */
-            font-family: Arial, sans-serif; /* Optional: Sets the font family */
-			font-weight: bold; /* Makes the text bold */
-
-        }
-		.highlighted {
-			background-color: #f5deb3; /* Highlight background */
-			color: black; /* Text color */
-			padding: 5px; /* Some padding around the text */
-			border-radius: 5px; /* Optional: rounded corners */
+		.billboard {
+			background-color: #900C3F; /* Vibrant background color */
+			padding: 16px;
+			border-radius: 10px; /* Rounded corners for the billboard */
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+			text-align: center;
+			position: relative;
+			margin: 20px auto; /* Center the billboard */
+			max-width: 80%; /* Adjust based on your preference */
 }
+
+		.marquee-container {
+			padding: 10px;
+			background-color: #FF5733; /* Bright background for the text area */
+			border-radius: 5px; /* Slightly rounded corners within the billboard */
+		}
+
+		.marquee-text {
+			font-size: 24px;
+			font-weight: bold;
+			color: #FFFFFF; /* Bright text for visibility */
+			font-family: 'Arial', sans-serif; /* Choose a bold, clear font */
+		}
+
+		.lights-top, .lights-bottom {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 10px;
+			background: repeating-linear-gradient(90deg, #FFFF33, #FFFF33 10px, transparent 10px, transparent 20px); /* Simulating lights */
+		}
+
+		.lights-top {
+			top: 0;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+
+		.lights-bottom {
+			bottom: 0;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+
+				.highlighted {
+					background-color: #f5deb3; /* Highlight background */
+					color: black; /* Text color */
+					padding: 5px; /* Some padding around the text */
+					border-radius: 5px; /* Optional: rounded corners */
+		}
 
     </style>
 </head>
 <body>
     <Header title={SITE_TITLE} />
     <main>
-		<marquee class="marquee-text">Web. Analytics. Music. Economics. Financial Intelligence.</marquee>
-		<h1>🧑🏻‍💻 Chris Blogs</h1>
-		<p>Hey there, I'm Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.</p>
-        <p>My interests are multifaceted and range from cat humor to entropy. Here are some of the topics touched on in this blog:</p>
+		<div class="billboard">
+			<div class="lights-top"></div>
+			<div class="marquee-container">
+				<marquee class="marquee-text">🌐 Web. 📊 Analytics. 🎺 Music. 🏬 Markets. 🤖 Flexwork. </marquee>
+			</div>
+			<div class="lights-bottom"></div>
+		</div>
+		
+				<h1>🧑🏻‍💻 Chris Blogs</h1>
+		<p>Hey there, I'm Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.
+			My interests are multifaceted and range from cat humor to entropy. Arranged in no partcular order, here are some of the topics touched on in this blog:</p>
         <ul>
-            <li><h4>Data Analytics</h4>
-                <div class="description">Exploring the power of data in driving decisions and insights.</div>
+			<li><h4>Web Development</h4>
+                <div class="description">Delving into the digital realm, one line of code at a time, crafting seamless experiences.</div>
             </li>
-            <li><h4>Web Development</h4>
-                <div class="description">Building the web, one line of code at a time.</div>
+            <li><h4>Data Analytics</h4>
+                <div class="description">Harnessing the power of data to uncover actionable insights and inform decision-making.</div>
             </li>
             <li><h4>Music Industry</h4>
-                <div class="description">Behind the scenes of industry and sounds.</div>
+                <div class="description">Exploring the vibrant world of music through artists, emerging trends, and cultural shifts.</div>
             </li>
-            <li><h4>Economics</h4>
-                <div class="description">Understanding the forces that shape the US monetary system.</div>
+			<li><h4>Financial Markets</h4>
+                <div class="description">Navigating the intricacies of trading, from traditional stock exchanges to the dynamic sphere of decentralized platforms.</div>
             </li>
-            <li><h4>Financial Intelligence</h4>
-                <div class="description">Empowering market analysis and accounting best practices.</div>
+            <li><h4>Post-COVID Workplace</h4>
+                <div class="description">Exploring the evolution of flexible working in remote environments, reduced hours, and improved work-life balance.</div>
             </li>
         </ul>        <!-- Additional content and helpful links -->
     </main>
