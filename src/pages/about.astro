@@ -4,39 +4,39 @@ import Layout from '../layouts/BlogPost.astro';
 
 <Layout
     title="About Me"
-    description="Learn more about Chris"
+    description="Learn more about Chris Rotunno"
     pubDate={new Date('2024-01-25')}
     heroImage="/books_cover.png"
 >
-    <style>
-        @keyframes rotateImage {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .rotating-image {
-            animation: rotateImage 20s infinite linear;
-            width: 150px; /* Adjust the size of the images */
-            height: auto; /* Maintain aspect ratio */
-        }
-        .image-container {
-            display: flex;
-            justify-content: center; /* Center the images horizontally */
-            gap: 20px; /* Space between the images */
-        }
-    </style>
+    <p>Hello and welcome! I'm Chris, originally from Fort Collins, CO, now living in Nashville, TN, after a sunny stint in Saint Petersburg, FL. My life's been thrilling, from skiing and BMX racing in my youth to diving deep into academia and technology as an adult.</p>
 
-    <p>Hello and welcome! I'm Chris, originally from Fort Collins, CO, now living in Nashville, TN after a sunny stint in Saint Petersburg, FL. My life's been a thrilling ride from skiing and BMX racing in my youth to diving deep into academia and technology as an adult.</p>
+    <p>I hold a BS in Operations and Information Management and an MS in Business Analytics from CU Boulder, and I'm nearing the completion of my MBA in Music Business at MTSU. My 12-year career spans retail to corporate, where I've honed my skills in Python, JS, SQL, and more.</p>
 
-    <p>I hold a BS in Operations and Information Management and a MS in Business Analytics from CU Boulder, and I'm nearing the completion of my MBA in Music Business at MTSU. My 12-year career spans retail to corporate, where I've honed my skills in Python, JS, SQL, and more.</p>
-
-    <p>Outside of my career, my world revolves around my love for arts and sciences, reading, creating content, the joy of caring for my cat and dog, and the quest for love and companionship. I'm actively shaping a future filled with family warmth, financial stability, and the thrill of travel, all the while savoring the journey itself.</p>
+    <p>Outside of my career, my world revolves around my love for arts and sciences, reading, creating content, the joy of caring for my cat and dog, and the quest for love and companionship. I'm actively shaping a future filled with family warmth, financial stability, and the thrill of travel while savoring the journey itself.</p>
 
     <div class="image-container">
-        <img src="/sandythedog.png" alt="Sandy the Dog" class="rotating-image"><img src="/honeythecat.png" alt="Honey the Cat" class="rotating-image">
+        <img src="/sandythedog.png" alt="Sandy the Dog" class="rotating-image">
+        <img src="/honeythecat.png" alt="Honey the Cat" class="rotating-image">
     </div>
-
 </Layout>
+
+<style>
+    @keyframes rotateImage {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .rotating-image {
+        animation: rotateImage 20s infinite linear;
+        width: 150px; /* Adjust the size of the images */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+        gap: 20px; /* Space between the images */
+    }
+</style>
