@@ -1,7 +1,7 @@
 ---
 title: 'I Built A Blog With Astro'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
+pubDate: 'Jan 27 2024'
 heroImage: '/blog-placeholder-4.jpg'
 ---
 Right off the bat, I have to say, my developer experience with Astro has been outstanding! Although I'm just beginning to explore its depths, my interactions in the Discord server have been remarkable, with prompt and helpful responses from the community. Additionally, transitioning from React, I've found the adoption process to be quite smooth. The similarities in concepts and structure have made it easier to get accustomed to the new environment.
@@ -45,9 +45,8 @@ Right from the start, Astro provided me with a user-friendly sandbox environment
 
 # Part II: Astro Blog Template
 
-As I navigated back to **VS Code**, I began to investigate the project structure. Here's what I found in the `src` folder.
+As I navigated back to **VS Code**, I began to investigate the project structure. Here's the file tree I found in the `src` folder.
 ```plaintext
-project-root
 ┣ 📂components
 ┃ ┣ 📜BaseHead.astro
 ┃ ┣ 📜Footer.astro
@@ -203,23 +202,63 @@ While this required managing a few more elements, the process remained intuitive
 
 
 
-Upon reaching the blog page, I was immediately satisfied with its pre-established layout, as previously outlined in the initial segment of this narrative. Consequently, I chose to preserve its design as-is, pivoting my focus towards the creation of blog content through MDX. This marked a significant milestone in my journey. The next steps involved establishing a repository and deploying the site on Netlify, thus transitioning from development to live deployment.
+I was immediately satisfied with the template's preset layout, as previously outlined in the initial segment of this narrative. Consequently, I chose to preserve its design as-is, pivoting my focus towards the creation of blog content through MDX. This marked a significant milestone in my journey. The next steps involved establishing a repository and deploying the site on Netlify, thus transitioning from development to live deployment.
 
 # Part IV: Deploying The Project With CI/CD
 
 
 
-Having finalized my edits and achieved a satisfactory state with the project, the next logical step was to facilitate Continuous Integration and Deployment (CI/CD). To this end, I initiated a new repository on GitHub. This allowed me to utilize standard Git commands to seamlessly transfer my project to the repository.
+Having finalized my edits and achieved a satisfactory state with the project, the next logical step was to facilitate Continuous Integration and Deployment (CI/CD). To this end, I initiated a new repository on GitHub called "chris-blogs". This allowed me to utilize standard Git commands to seamlessly transfer my project to the repository. Here are the commands I used straight from the VS Code IDE:
+
+```
+//.bash
+git init
+git remote add origin https://github.com/towardsuffering/chris-blogs.git
+git add .
+git commit -m "first blog edit"
+git push https://github.com/towardsuffering/chris-blogs.git
+```
 
 Following the successful upload of my project to GitHub, I logged into my Netlify account to initiate the deployment process. By linking to the GitHub repository, I was able to deploy the project on Netlify's Content Delivery Network (CDN). The deployment process was swift and efficient, resulting in the project being promptly accessible via a Netlify-provided generic URL.
 
 The final touch involved associating a custom domain with the project, thereby enhancing its accessibility and professional appeal.
 
+Concluding my development process, I conducted a Lighthouse audit in my Chrome browser to assess the performance of my website. The results were encouraging; on desktop, my site achieved an impressive score of 96. However, the mobile version presented a distinct contrast, scoring a modest 76. This disparity highlighted clear opportunities for optimization and improvement, particularly in the mobile experience.
+
+**Desktop**
+
+
+![lighthouse-desktop](../assets/lighthouse-desktop.png)
+
+
+**Mobile**
+
+![lighthouse-desktop](../assets/lighthouse-mobile.png)
+
+
+
+I embrace these initial performance metrics as they align with the MVP approach, which prioritizes progress and functionality over achieving perfection at the outset. This strategy centers on delivering a working product to users, with the understanding that performance enhancements and refinements can be methodically addressed in future iterations.
+
+
+
+
+
+
+
+
 # Pain Points
-#### Social Media Icons
-
-cd
-
+#### Social Media icons
+- I faced SVG integration challenges with adding social media logos, which were initially mitigated by using the Starlight package, as advised by the Astro community. Later, astro-icon was recommended for a more efficient solution.
+#### My Lack of HTML, CSS, and JS Skills
+- My limited skills in HTML, CSS, and JavaScript meant I heavily relied on online resources and ChatGPT for troubleshooting, leading to a progressive, hands-on learning experience.
 # Future Developments
 #### Hamburger With Dynamic Display
-#### Add RSS Feed
+- I plan to introduce a dynamic hamburger menu to improve user experience and performance across all devices, marking a significant upgrade in both functionality and design.
+#### RSS Feed
+- I'm also looking to fully leverage the blog's potential by integrating an RSS feed, enhancing accessibility and audience reach, and utilizing modern web technologies for better engagement.
+#### Compressed Images
+- I plan to compress all images on the site, a crucial step towards enhancing load times and overall site performance, especially for mobile users.
+#### Tag-Based Search Functionality
+- Implementing a sophisticated search feature that categorizes and retrieves content based on specific tags is a key enhancement I'm aiming for. This functionality will facilitate a more intuitive and efficient user experience, allowing for quick access to thematically grouped information.
+#### Expanding Blog Content
+- While it is a continuous development, a key addition to my blog will be posts featuring my musical creations and video content, paralleling my YouTube and SoundCloud uploads. Committing to regular updates is essential for achieving my goal of reaching 20,000 YouTube subscribers by year-end. Consistency will be crucial in this endeavor.
