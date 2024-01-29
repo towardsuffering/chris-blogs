@@ -1,12 +1,17 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+const title = "About Me";
+const description = "Learn more about Chris Rotunno";
+const pubDate = new Date('2024-01-25');
+const heroImage = "/books_cover.png";
 ---
 
-<Layout
-    title="About Me"
-    description="Learn more about Chris Rotunno"
-    pubDate={new Date('2024-01-25')}
-    heroImage="/books_cover.png"
+<Layout 
+    title={title} 
+    description={description} 
+    pubDate={pubDate} 
+    heroImage={heroImage}>
+
     <div class="content-wrapper">
         <div class="image-grid">
             <img src="/sandythedog.png" alt="Sandy the Dog" class="rotating-image">
@@ -14,29 +19,30 @@ import Layout from '../layouts/BlogPost.astro';
         </div>
 
         <p>I'm Chris, originally from Fort Collins, CO, now living in Nashville, TN, after a sunny stint in Saint Petersburg, FL. My life's been thrilling, from skiing and BMX racing in my youth to diving deep into academia and technology as an adult.</p>
+        
+        <p>I hold a BS in Operations and Information Management and an MS in Business Analytics from CU Boulder, and I'm nearing the completion of my MBA in Music Business at MTSU. My 12-year career spans retail to corporate, where I've honed my skills in Python, JS, SQL, and more.</p>
+
+        <p>Outside of my career, my world revolves around my love for arts and sciences, reading, creating content, the joy of caring for my cat and dog, and the quest for love and companionship. I'm actively shaping a future filled with family warmth, financial stability, and the thrill of travel while savoring the journey itself.</p>
+
+        <h4>🌠 Welcome to the World of a Visionary Weaver!</h4>
+
+        <p>Hello and welcome to my space where creativity meets logic, empathy intertwines with strategy, and innovation dances with knowledge. I am a weaver of ideas, a strategist of life, and an empathetic leader in a world brimming with endless possibilities.</p>
+    
+        <p> <strong>Empathetic Leadership</strong>: At the core of my being resonates a deep-seated empathy, mirrored in my love for words like "Love" and "Compassion." My approach to leadership is heart-centered, aiming to uplift and inspire everyone who crosses my path.</p>
+    
+        <p> <strong>Strategic Mindset</strong>: Armed with "Logic," "Analysis," and "SWOT," I navigate through life's complexities with clarity and foresight. My strategies are carefully crafted puzzles, designed to bring order and understanding to the chaos of the world.</p>
+    
+        <p> <strong>Creative Innovator</strong>: My passion lies in innovation and creation. Words like "Initiate," "Craft," and "Synergy" are the tools I use to mold the future. I believe in the power of turning imaginative ideas into tangible realities.</p>
+    
+        <p> <strong>Tech Enthusiast and Knowledge Seeker</strong>: In the realm of technology and information, I am at my most enthusiastic. "Database," "Node," and "Program" are more than just terms to me; they represent a world of endless learning and exploration.</p>
+    
+        <p> <strong>Nature and Balance Advocate</strong>: My connection with nature and the importance of balance in life is reflected in words like "Tree," "Root," and "Elastic." I understand that growth is a journey, one that requires resilience, adaptability, and most importantly, intuition.</p>
+    
+        <p> <strong>Harmonizer of Diverse Elements</strong>: I find harmony in the balance of opposites. "Variance" and "Constant," "Stateful" and "Stateless," "Risk" and "Gratitude" coexist within my worldview, symbolizing the beautiful symphony of stability and transformation.</p>
+    
+        <p>On this blog, you'll journey through my multifaceted world – a place where empathy and strategy, creativity and practicality, technology and nature all converge. Join me as we explore, innovate, and grow together, one word, one idea, one connection at a time.</p>
     </div>
-    <p>I hold a BS in Operations and Information Management and an MS in Business Analytics from CU Boulder, and I'm nearing the completion of my MBA in Music Business at MTSU. My 12-year career spans retail to corporate, where I've honed my skills in Python, JS, SQL, and more.</p>
 
-    <p>Outside of my career, my world revolves around my love for arts and sciences, reading, creating content, the joy of caring for my cat and dog, and the quest for love and companionship. I'm actively shaping a future filled with family warmth, financial stability, and the thrill of travel while savoring the journey itself.</p>
-
-    <h4>🌠 Welcome to the World of a Visionary Weaver!</h4>
-
-    <p>Hello and welcome to my space where creativity meets logic, empathy intertwines with strategy, and innovation dances with knowledge. I am a weaver of ideas, a strategist of life, and an empathetic leader in a world brimming with endless possibilities.</p>
-    
-    <p> <strong>Empathetic Leadership</strong>: At the core of my being resonates a deep-seated empathy, mirrored in my love for words like "Love" and "Compassion." My approach to leadership is heart-centered, aiming to uplift and inspire everyone who crosses my path.</p>
-    
-    <p> <strong>Strategic Mindset</strong>: Armed with "Logic," "Analysis," and "SWOT," I navigate through life's complexities with clarity and foresight. My strategies are carefully crafted puzzles, designed to bring order and understanding to the chaos of the world.</p>
-    
-    <p> <strong>Creative Innovator</strong>: My passion lies in innovation and creation. Words like "Initiate," "Craft," and "Synergy" are the tools I use to mold the future. I believe in the power of turning imaginative ideas into tangible realities.</p>
-    
-    <p> <strong>Tech Enthusiast and Knowledge Seeker</strong>: In the realm of technology and information, I am at my most enthusiastic. "Database," "Node," and "Program" are more than just terms to me; they represent a world of endless learning and exploration.</p>
-    
-    <p> <strong>Nature and Balance Advocate</strong>: My connection with nature and the importance of balance in life is reflected in words like "Tree," "Root," and "Elastic." I understand that growth is a journey, one that requires resilience, adaptability, and most importantly, intuition.</p>
-    
-    <p> <strong>Harmonizer of Diverse Elements</strong>: I find harmony in the balance of opposites. "Variance" and "Constant," "Stateful" and "Stateless," "Risk" and "Gratitude" coexist within my worldview, symbolizing the beautiful symphony of stability and transformation.</p>
-    
-    <p>On this blog, you'll journey through my multifaceted world – a place where empathy and strategy, creativity and practicality, technology and nature all converge. Join me as we explore, innovate, and grow together, one word, one idea, one connection at a time.</p>
-</p>
 </Layout>
 
 <style>
@@ -50,6 +56,8 @@ import Layout from '../layouts/BlogPost.astro';
         grid-template-columns: 1fr 1fr; /* Two equal columns */
         gap: 20px; /* Space between images */
         margin-bottom: 20px; /* Space below the image grid */
+        width: 100%; /* Make images scale to fit their grid column */
+        height: auto; /* Maintain the aspect ratio of the images */
     }
 
     .rotating-image {
@@ -59,8 +67,6 @@ import Layout from '../layouts/BlogPost.astro';
         display: block; /* Ensure the image is a block-level element */
         margin: auto; /* Center the image in its grid cell */
 }
-
-
     @keyframes rotateImage {
         from {
             transform: rotate(0deg);
