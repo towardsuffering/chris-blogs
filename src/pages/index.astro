@@ -105,7 +105,7 @@ import '../styles/global.css';
 			display: flex;
 			justify-content: center; /* Center horizontally */
 			align-items: center; /* Center vertically */
-			margin: 20px auto; /* Adds vertical space and centers horizontally */
+			margin: 40px auto 40px; /* Increased bottom margin */
 			box-shadow: 0 0 0 5px #f5deb3; /* Simulates a border with shadow */
 			border-radius: 15px; /* Rounded corners */
 			overflow: hidden; /* Clips content to border radius */
@@ -119,20 +119,10 @@ import '../styles/global.css';
 			display: block; /* Removes any default margin or padding */
 		}
 
-
 		.centered-text {
 			text-align: center; /* Centers the text horizontally within its container */
 			margin: 20px 0; /* Adds vertical spacing above and below the text for better separation */
 }
-		.three-column-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .column {
-            flex: 1;
-            padding: 0 10px;
-        }
 		.bag-container {
             border: 2px solid #ccc;
             padding: 20px;
@@ -184,7 +174,7 @@ import '../styles/global.css';
 			padding: 10px 20px; /* Button padding */
 			background-color: #f5deb3; /* Button background color */
 			color: navy; /* Text color */
-			border: 2px solid #3e8e41; /* Border color */
+			border: 2px solid #2337ff; /* Border color */
 			border-radius: 5px; /* Rounded corners */
 			font-size: 16px; /* Text size */
 			cursor: pointer; /* Cursor changes to indicate it's clickable */
@@ -193,22 +183,19 @@ import '../styles/global.css';
 		}
 
 		button#randomWordButton:hover {
-			background-color: #45a049; /* Slightly lighter color on hover */
+			background-color: #2337ff; /* Slightly lighter color on hover */
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+			color: white; 
 		}
 
 		button#randomWordButton:active {
 			background-color: #367c39; /* Darker color when the button is clicked */
 			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Smaller shadow for a "pressed" effect */
 		}
-
-
-
-
-
-
-
-
+		h2 {
+		margin: 10px;
+        text-align: center; /* Centers the h1 text horizontally */
+    }
     </style>
 </head>
 <body>
@@ -222,14 +209,14 @@ import '../styles/global.css';
 			<div class="lights-bottom"></div>
 		</div>
 		
-				<h1>🧑🏻‍💻 Chris Blogs</h1>
+				<h2>🧑🏻‍💻 Chris Blogs</h2>
 				<section id="chris-blogs-video">
 					<div class="video-container">
 						<iframe src="https://www.youtube.com/embed/qSSLe0lervg" title="YouTube video player" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 				  </section>
-				<p>Hey there, my name is Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.
-					My interests are multifaceted and range from cat humor to entropy. Click the button below to see some of my favorite words, I encourage you to take a look and to browse the rest of my site.</p>
+				<p>My name is Chris Rotunno, and you've landed on "Chris Blogs", my personal platform for <span class="highlighted">development</span>, <span class="highlighted">discovery</span>, and <span class="highlighted">content creation</span>.
+					My interests are multifaceted, ranging from cat humor to entropy. I encourage you to click the button below and browse the rest of my site.</p>
 				<p></p>
 				<div class="container">
 					<div id="wordDisplay" class="word-display"></div> <!-- Word will be displayed here -->
