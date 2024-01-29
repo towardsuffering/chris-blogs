@@ -120,32 +120,10 @@ import '../styles/global.css';
                 font-size: 16px; /* Smaller font size */
             }
         }
-		.nav-links {
-    /* Other styles... */
-    display: none; /* Hidden by default on mobile */
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links.expanded {
-        display: block; /* Show when hamburger is clicked */
-    }
-    .hamburger {
-        display: block; /* Show hamburger icon on mobile */
-    }
-}
     </style>
 </head>
 <body>
     <Header title={SITE_TITLE} />
-	<!-- Hamburger Menu Icon -->
-	<div class="hamburger" id="hamburger-icon">
-		<!-- Hamburger lines here -->
-	</div>
-
-	<!-- Navigation Links -->
-	<nav class="nav-links" id="nav-links">
-		<!-- Your navigation links here -->
-	</nav>
     <main>
 		<div class="billboard">
 			<div class="lights-top"></div>
@@ -172,11 +150,5 @@ import '../styles/global.css';
 				</ul>        <!-- Additional content and helpful links -->
     </main>
     <Footer />
-    <script>
-        // JavaScript to toggle the navigation menu on click/tap
-        document.getElementById('hamburger-icon').addEventListener('click', function() {
-            document.getElementById('nav-links').classList.toggle('expanded');
-        });
-    </script>
 </body>
 </html>
