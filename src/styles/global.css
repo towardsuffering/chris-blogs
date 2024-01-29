@@ -158,5 +158,86 @@ hr {
     max-width: none;
     width: auto;
 }
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
 
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #FF5733;
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: navy;
+    display: none;
+    margin: 0;
+}
+  /* Add this new class for the active link */
+.nav-links a.active {
+    text-decoration: none; /* Removes underline */
+}
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    text-decoration: none; /* Remove default text underline */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black; /* Black text color */
+    position: relative;
+    transition: color 0.3s ease; /* Transition for color change */
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #2337ff; /* Change text color to blue on hover/focus */
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 6px; /* Thicker underline */
+    background-color: #2337ff; /* Blue underline */
+    position: absolute;
+    bottom: -4px; /* Closer to the text */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease; /* Transition for underline width */
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%; /* Full width on hover/focus */
+}
+
+/* Styles for expanded and responsive navigation */
+.expanded {
+    display: unset;
+}
   
+@media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+}

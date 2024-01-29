@@ -1,5 +1,6 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import Navigation from './Navigation.astro';
+import Hamburger from './Hamburger.astro';
 import { SITE_TITLE } from '../consts';
 import { Icon } from '@astrojs/starlight/components';
 ---
@@ -8,9 +9,8 @@ import { Icon } from '@astrojs/starlight/components';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+        <Hamburger />
+        <Navigation />
 		</div>
 		<div class="social-links">
 			<a href="https://www.youtube.com/@root-labs" target="_blank">

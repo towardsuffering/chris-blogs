@@ -10,70 +10,48 @@ import '../styles/global.css';
 <html lang="en">
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
         }
         main {
-            max-width: 800px;
+            width: calc(100% - 2em);
+            max-width: 720px;
             margin: auto;
-            padding: 20px;
+            padding: 1em;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .billboard,
+        .video-container,
+        .centered-text,
+        .bag-container,
+        .container {
+            margin: 20px auto;
+            text-align: center;
         }
-        li {
-            margin-bottom: 20px; /* Increased to accommodate descriptions */
-            padding-left: 20px;
+        .billboard {
+			background-color: #900C3F;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
             position: relative;
+            margin: 20px auto;
+            max-width: 80%;
         }
-        li:before {
-            content: '•';
-            color: #007BFF; /* Change to your preferred bullet color */
-            font-size: 20px;
-            position: absolute;
-            left: 0;
-        }
-        .description {
-            margin-top: 5px;
-            margin-left: 20px; /* Aligns with bullet text */
-        }
-        code {
-            background-color: #f5f5f5;
-            border-radius: 4px;
-            padding: 2px 4px;
-        }
-        a {
-            color: #007BFF; /* Match bullet color for consistency */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-		.billboard {
-			background-color: #900C3F; /* Vibrant background color */
-			padding: 16px;
-			border-radius: 10px; /* Rounded corners for the billboard */
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-			text-align: center;
-			position: relative;
-			margin: 20px auto; /* Center the billboard */
-			max-width: 80%; /* Adjust based on your preference */
-}
 		.marquee-container {
 			padding: 10px;
 			background-color: #FF5733; /* Bright background for the text area */
 			border-radius: 5px; /* Slightly rounded corners within the billboard */
 		}
-
 		.marquee-text {
 			font-size: 24px;
 			font-weight: bold;
 			color: #FFFFFF; /* Bright text for visibility */
 			font-family: 'Arial', sans-serif; /* Choose a bold, clear font */
 		}
-
 		.lights-top, .lights-bottom {
 			content: '';
 			position: absolute;
@@ -82,120 +60,66 @@ import '../styles/global.css';
 			height: 10px;
 			background: repeating-linear-gradient(90deg, #FFFF33, #FFFF33 10px, transparent 10px, transparent 20px); /* Simulating lights */
 		}
-
 		.lights-top {
 			top: 0;
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 		}
-
 		.lights-bottom {
 			bottom: 0;
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
 		}
-
-		.highlighted {
-			background-color: #f5deb3; /* Highlight background */
-			color: black; /* Text color */
-			padding: 5px; /* Some padding around the text */
-			border-radius: 5px; /* Optional: rounded corners */
-		}
-		.video-container {
-			display: flex;
-			justify-content: center; /* Center horizontally */
-			align-items: center; /* Center vertically */
-			margin: 40px auto 40px; /* Increased bottom margin */
-			box-shadow: 0 0 0 5px #f5deb3; /* Simulates a border with shadow */
-			border-radius: 15px; /* Rounded corners */
-			overflow: hidden; /* Clips content to border radius */
-			width: 560px; /* Width of the iframe */
-			max-width: 100%; /* Ensure it doesn't exceed its parent's width */
-		}
-
-		.video-container iframe {
-			width: 100%; /* Take full width of the container */
-			height: 315px; /* Standard height for the video */
-			display: block; /* Removes any default margin or padding */
-		}
-
-		.centered-text {
-			text-align: center; /* Centers the text horizontally within its container */
-			margin: 20px 0; /* Adds vertical spacing above and below the text for better separation */
-}
-		.bag-container {
-            border: 2px solid #ccc;
-            padding: 20px;
-            margin: 20px auto;
-            width: 300px;
-            text-align: center;
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 5px #f5deb3;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 560px;
+            max-width: 100%;
         }
-        button {
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
+            display: block;
+        }
+        .highlighted {
+            background-color: #f5deb3;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        button#randomWordButton {
             padding: 10px 20px;
             background-color: #f5deb3;
-;
-            color: black;
-            border: none;
+            color: navy;
+            border: 2px solid #2337ff;
             border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
-            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
-        button:hover {
-            background-color: #f5deb3;
+        button#randomWordButton:hover {
+            background-color: #2337ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: white;
         }
-		.container {
-			text-align: center; /* Center everything in the container */
-			padding: 20px; /* Add some padding for spacing */
-		}
-		.word-display {
-			text-align: center; /* Center text */
-			margin-top: 20px; /* Space between button and text */
-			opacity: 0; /* Initially hide the text */
-		}
-
-		@keyframes growAndShrink {
-			0%, 100% {
-				transform: scale(1);
-				opacity: 0;
-			}
-			50% {
-				transform: scale(1.5);
-				opacity: 1;
-			}
-		}
-
-		.word-animate {
-			animation: growAndShrink 1s ease;
-		}
-		button#randomWordButton {
-			padding: 10px 20px; /* Button padding */
-			background-color: #f5deb3; /* Button background color */
-			color: navy; /* Text color */
-			border: 2px solid #2337ff; /* Border color */
-			border-radius: 5px; /* Rounded corners */
-			font-size: 16px; /* Text size */
-			cursor: pointer; /* Cursor changes to indicate it's clickable */
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-			transition: all 0.3s ease; /* Smooth transition for hover and active states */
-		}
-
-		button#randomWordButton:hover {
-			background-color: #2337ff; /* Slightly lighter color on hover */
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
-			color: white; 
-		}
-
-		button#randomWordButton:active {
-			background-color: #367c39; /* Darker color when the button is clicked */
-			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Smaller shadow for a "pressed" effect */
-		}
-		h2 {
-		margin: 10px;
-        text-align: center; /* Centers the h1 text horizontally */
-    }
+        @media (max-width: 768px) {
+            .video-container {
+                width: 100%; /* Full width for mobile */
+                margin: 20px 0; /* Adjust margin */
+            }
+            .billboard {
+                margin: 10px auto; /* Smaller margin */
+                padding: 8px; /* Less padding */
+            }
+            .marquee-text {
+                font-size: 16px; /* Smaller font size */
+            }
+        }
     </style>
 </head>
 <body>
