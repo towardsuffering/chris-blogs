@@ -9,7 +9,7 @@ const SITE_TITLE = 'Chris Blogs'; // Hardcoded for now, as discussed
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://chrisblogs.dev',
   integrations: [expressiveCode(),
   // Assuming this is the correct function call for astro-expressive-code
   starlight({
