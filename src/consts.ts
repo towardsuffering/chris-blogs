@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Chris Blogs';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const OG_IMAGE = '../public/chrisblogsog.png'; // This is the path relative to the public directory
