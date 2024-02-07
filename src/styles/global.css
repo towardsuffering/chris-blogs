@@ -106,8 +106,8 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	background-color: #f5deb3;
+	border-radius: 10px;
 }
 pre {
 	padding: 1.5em;

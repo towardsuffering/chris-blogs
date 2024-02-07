@@ -28,6 +28,8 @@ const absoluteImageUrl = heroImage ? new URL(heroImage, Astro.url).toString() : 
                 margin: 0 auto;
                 border-radius: 12px;
                 box-shadow: var(--box-shadow);
+                max-width: 100%;
+                height: auto;
             }
             .prose {
                 width: 720px;
