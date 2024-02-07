@@ -29,7 +29,40 @@ This tutorial guide is designed to not only assist new developers through their 
 - <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 # 🌐 Create and deploy our first Astro site
-The
+#### Launch the Astro setup wizard
+```
+npm create astro@latest
+```
+The prompt asks where to create your new project? Type `./astro_blogv1` and press enter.
+
+![Astro Blog](../assets/astro_blogv1.png)
+
+Use the down arrow to select `Empty` project and press enter.
+
+![Astro Blog](../assets/empty_project.png)
+
+When the prompt asks, “Would you like to install dependencies?” type `y`.
+
+When the prompt asks you if you plan on writing TypeScript, type `n`.
+
+When the prompt asks, “Would you like to initialize a new git repository?” type `y`.
+
+Once the setup wizard is complete, step into the project directory and VS Code.
+
+#### Run Astro in dev mode
+```
+./astro_blogv1
+code .
+```
+Once in VS Code, navigate to the integrated terminal `ctrl + shift + p`
+
+Start the dev server.
+```
+npm run dev
+```
+Open http://localhost:4321 in your browser. Here's how the website looks.
+![Astro Blog](../assets/preview.png)
+
 
 # 😎 Add style and link to pages on the site
 The
