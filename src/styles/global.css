@@ -103,8 +103,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
-	border: 2px solid #000; /* Adjust the color and size as needed */
-
 }
 code {
 	padding: 2px 5px;
